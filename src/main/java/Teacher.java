@@ -22,11 +22,13 @@ public class Teacher extends Person {
         return String.format("My name is %s. I am %s years old. Teaching for the future of world.",getName(),getAge());
     }
 
-    void AddClass(Class class) {
-        if (this.getClasses().size()<=5) {
-            classes.add(class);
+    public void AddClass(Class Class) {
+        if (this.getClasses().size()<=4) {
+            //System.out.println(getClasses().size());
+            classes.add(Class);
         }
     }
+
 
     /*boolean checkMaxClass(List<Class> classes){
         if (classes.size()<=5) {
