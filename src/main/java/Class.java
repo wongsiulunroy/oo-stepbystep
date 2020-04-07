@@ -75,6 +75,26 @@ public class Class {
             LeaderMessage =  student.getName()+ " is the leader of Class "+ this.ClassNo;
         }
         return LeaderMessage;
-
     }
+
+    String NewStudentJoinClass(Student studentNew, Student studentOld) {
+        String NewStudentMessage="";
+        if (studentNew.getClassNo() != ClassNo){
+            students.add(studentNew);
+            studentNew.setClassNo(this.ClassNo);
+        }
+        NewStudentMessage += studentOld.introduce()+ ". Welcome "+ studentNew.getName()+ " join Class " + ClassNo+".";
+        return (NewStudentMessage);
+    }
+
+    String NewLeaderJoinClass(Student Leader, Student studentOld) {
+        String NewLeaderMessage="";
+        if (Leader.getClassNo() != ClassNo){
+            setLeader(Leader);
+            Leader.setClassNo(this.ClassNo);
+        }
+        NewLeaderMessage += studentOld.introduce()+ ". "+ Leader.getName()+ " is the leader of Class " + ClassNo+".";
+        return (NewLeaderMessage);
+    }
+
 }

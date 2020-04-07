@@ -43,6 +43,29 @@ public class ClassTest {
         String welcome = "My name is MsChan. I am 35 years old. Teaching for the future of world. john is the leader of Class 2";
         Assert.assertEquals(welcome, class2.AssignLeader(john));
     }
+    @Test
+    public void should_check_NewStudentJoinClass() {
+        Class class2 = new Class(2);
+        Student john = new Student("john",18);
+        Student Kyle = new Student("Kyle",18);
+        Kyle.setClassNo(2);
+        Teacher MsChan = new Teacher("MsChan", 35);
+        //class2.NewStudentJoinClass(john, Kyle);
+        String welcome = "My name is Kyle. I am 18 years old. I am a student of Class 2. Coding for the glory of OOCL. Welcome john join Class 2.";
+        Assert.assertEquals(welcome, class2.NewStudentJoinClass(john, Kyle));
+    }
+    @Test
+    public void should_check_NewLeaderJoinClass() {
+        Class class2 = new Class(2);
+        Student john = new Student("john",18);
+        Student Kyle = new Student("Kyle",18);
+        Kyle.setClassNo(2);
+        Teacher MsChan = new Teacher("MsChan", 35);
+        //class2.NewStudentJoinClass(john, Kyle);
+        String welcome = "My name is Kyle. I am 18 years old. I am a student of Class 2. Coding for the glory of OOCL. john is the leader of Class 2.";
+        Assert.assertEquals(welcome, class2.NewLeaderJoinClass(john, Kyle));
+    }
+
 
 
 }
