@@ -9,4 +9,8 @@ public class TeacherTest {
         assertEquals("My name is Tom. I am 21 years old. Teaching for the future of world.",teacher.introduce());
     }
 
+    @Test
+    public void should_check_addClass(){
+        
+    }
 }
